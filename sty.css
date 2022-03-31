@@ -3,6 +3,7 @@ body{
     color:whitesmoke !important;
     width: 100%;
     height: 100%;
+    overflow:hidden;
 }
 .flex{
     display: flex;
