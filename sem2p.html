@@ -1,0 +1,128 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>p-cycle sgpa calculator </title>
+<link rel="shortcut icon" type="image/png" href="portfolio.png">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<link rel="stylesheet" href="sty.css">
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://kit.fontawesome.com/688a5f742f.js" crossorigin="anonymous"></script>
+
+<style>
+    form input{
+       padding:5px;
+       background-color: transparent;
+       border-radius: 2px;
+       border: solid white 1px;
+       margin:3px;
+    }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="img" data-aos="slide-right"  data-aos-duration="500">
+    <img src="hat.png"> 
+</div>
+<div class="plane container">
+    <div>
+<h1  data-aos="slide-up"  data-aos-duration="500">Ease your calculations....</h1><br>
+<h2  data-aos="slide-up"  data-aos-duration="500">Choose your Cycle</h2><br>
+<div class="get">
+    
+    <div id="chem">
+        <form style="color: white;">
+          
+            <input type="number" value="" id="sem1csub1" name="sem1csub1" placeholder="marks of 18MAT11"><br>
+            <input type="number" value="" id="sem1csub2" name="sem1csub2" placeholder="marks of 18CHE12"><br>
+            <input type="number" value="" id="sem1csub3" name="sem1csub3" placeholder="marks of 18CPS13"><br>
+            <input type="number" value="" id="sem1csub4" name="sem1csub4" placeholder="marks of 18ELN14"><br>
+            <input type="number" value="" id="sem1csub5" name="sem1csub5" placeholder="marks of 18ME15"><br>
+            <input type="number" value="" id="sem1csub6" name="sem1csub6" placeholder="marks of 18CHEL16"><br>
+            <input type="number" value="" id="sem1csub7" name="sem1csub7" placeholder="marks of 18CPL17"><br>
+            <input type="number" value="" id="sem1csub8" name="sem1csub8" placeholder="marks of 18EGH18"><br>
+            <input type="button" onClick="sgpa()" Value="sgpa" >
+ </form>
+        <p>SGPA:
+            <span id = "result"></span>
+            </p>
+           
+                    <p>Percentage:
+                        <span id = "percentage"></span>
+                        </p>
+    </div>
+       
+       
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+function sgpa()
+{
+    const num=[];
+   
+        num[0] = document.getElementById("sem1csub1").value;
+        num[1] = document.getElementById("sem1csub2").value;
+        num[2]= document.getElementById("sem1csub3").value;
+        num[3]= document.getElementById("sem1csub4").value;
+        num[4]= document.getElementById("sem1csub5").value;
+        num[5]= document.getElementById("sem1csub6").value;
+        num[6]= document.getElementById("sem1csub7").value;
+        num[7]= document.getElementById("sem1csub8").value;
+ 
+
+    for(let i=0;i<8;i++){
+        if(num[i]<40)
+        num[i]=0;
+        else if(num[i]<44)
+        num[i]=4;
+        else if(num[i]<49)
+        num[i]=5;
+        else if(num[i]<60)
+        num[i]=6;
+        else if(num[i]<70)
+        num[i]=7;
+        else if(num[i]<80)
+        num[i]=8;
+        else if(num[i]<90)
+        num[i]=9;
+        else if(num[i]<=100)
+        num[i]=10;
+    }
+        document.getElementById("result").innerHTML =( ((eval(num[0])*4) + (eval(num[1])*4)+ (eval(num[2])*3)+ (eval(num[3])*3)+ (eval(num[4])*3)+ (eval(num[5])*1)+ (eval(num[6])*1)+ (eval(num[7])*1))/20);
+        sgpa=( ((eval(num[0])*4) + (eval(num[1])*4)+ (eval(num[2])*3)+ (eval(num[3])*3)+ (eval(num[4])*3)+ (eval(num[5])*1)+ (eval(num[6])*1)+ (eval(num[7])*1))/20);
+        document.getElementById("percentage").innerHTML=((sgpa*10)-7.5);
+}
+</script>
+</body>
+</html>
+
+
+
+
+

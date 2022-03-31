@@ -1,0 +1,150 @@
+body{
+    background-color:rgb(172, 153, 133) !important;
+    color:whitesmoke !important;
+    width: 100%;
+    height: 100%;
+}
+.flex{
+    display: flex;
+justify-content:center;
+}
+.img{ height: 100vh;
+display: grid;
+place-items: center;}
+.plane{
+    height: 100vh;
+      width:100%;
+     display: grid;
+     place-items: center;
+      margin:0px;
+    padding:0px;
+}
+
+img {
+    height:200px;
+        width:200px;
+        animation: plane-move 2s infinite alternate both;
+        box-shadow:  0 0px 0px -8px gray;
+}
+
+ a{
+    color:white !important;
+     border:solid white 0.5px;
+     border-radius:5px;
+     padding:10px;
+     margin:10px;
+     display: flex;
+}
+
+
+ a:hover{
+    box-shadow:  0 8px 16px -8px gray;
+    text-decoration: none;
+    color:rgb(150, 16, 43);
+    border-color:rgb(150, 16, 43);
+}
+
+@media screen and (min-width:601px){
+    @keyframes plane-move {
+        0% {
+            transform:translateY(0px);
+            transform:translateX(0px)
+        }
+        100% {
+            transform:translateY(50px);
+            transform:translateX(50px)
+        }
+    }
+
+    img{
+        height:200px;
+        width:200px;
+    }
+
+    h1{
+        font-size:xx-large;
+    }
+h2{
+    font-size: x-large;
+}
+    .get{
+        font-size:18px;
+        flex-flow: row;
+    }
+}
+
+@media screen and (max-width:601px){
+    @keyframes plane-move {
+        0% {
+            transform:translateY(0px);
+            transform:translateX(0px)
+        }
+        100% {
+            transform:translateY(8px);
+            transform:translateX(8px)
+        }
+    }
+    img{
+        height:100px;
+        width:100px;
+    }
+    .get{
+        
+        flex-flow:column;
+    }
+}
+#dept{
+    background-color: transparent;
+    color:white;
+    border:solid white 0.5px;
+    border-radius:5px;
+    padding:10px;
+    margin:10px;
+    display: flex;
+    width:350px;
+    
+}
+#dept option{
+    background-color:rgb(172, 153, 133);
+    
+}
+
+.dropdown-submenu {
+    position: relative;
+  }
+  .dropdown-menu{  background-color:rgb(172, 153, 133);}
+  .dropdown-submenu .dropdown-menu {
+    background-color:rgb(172, 153, 133);
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    
+  }
+.dropdown{
+    background-color: transparent;
+    color:white;
+    border:solid white 0.5px;
+    border-radius:5px;
+    padding:10px;
+    margin:10px;
+    display: flex;
+    width:350px;
+    font-size: larger;
+}
+.dropdown-submenu :hover{
+    background-color:transparent !important ;
+    box-shadow:  0 8px 16px -8px gray;
+    text-decoration: none;
+    color:rgb(150, 16, 43);
+    border-color:rgb(150, 16, 43);
+}
+.dropdown-menu :hover{
+    background-color:transparent !important ;
+    box-shadow:  0 8px 16px -8px gray;
+    text-decoration: none;
+    color:rgb(150, 16, 43);
+    border-color:rgb(150, 16, 43);
+}
+.dropdown-submenu :focus{
+    background-color: transparent !important;
+}

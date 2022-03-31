@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sgpa calculator</title>
+<link rel="shortcut icon" type="image/png" href="portfolio.png">
+
+<link rel="stylesheet" href="sty.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://kit.fontawesome.com/688a5f742f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="flex">
+        <div class="img" data-aos="slide-right"  data-aos-duration="500">
+    <img src="hat.png"> 
+</div>
+<div class="plane container">
+    <div>
+<h1  data-aos="slide-up"  data-aos-duration="500">Calculate yor sgpa</h1><br>
+<h2  data-aos="slide-up"  data-aos-duration="500">Choose your semester</h2><br>
+<div class="get">
+    <p data-aos="slide-left"  data-aos-duration="500"><a href="sem1.html" target="blank">1st Semester</a></p>
+        <p data-aos="slide-right"  data-aos-duration="500"><a href="sem2.html"  target="blank">2nd Semester</a></p>
+        
+        
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: rgb(172, 153, 133) !important; border:none; color:white;">OTHERS</button>
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu" style="background-color: rgb(172, 153, 133) !important;">
+            
+             <li> <a class="test" tabindex="-1" href="sem3.html">3rd sem</a></li>
+              
+               <li><a class="test" tabindex="-1" href="sem4.html">4th sem</a></li>
+               
+               <li> <a class="test" tabindex="-1" href="sem5.html">5th sem</a></li>
+               
+                <li> <a class="test" tabindex="-1" href="sem6.html">6th sem</a></li>
+                
+                  <li><a class="test" tabindex="-1" href="sem7.html">7th sem</a></li>
+                 <li> <a class="test" tabindex="-1" href="sem8.html">8th sem</a></li>
+                
+              </ul>
+           
+        </div>
+        </div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  $(document).ready(function(){
+    $('.dropdown-submenu a.test').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
+  </script>
+</body>
+</html>
