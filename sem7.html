@@ -95,7 +95,7 @@ function sgpa()
         num[5]= document.getElementById("sem1csub6").value;
         num[6]= document.getElementById("sem1csub7").value;
         num[7]= document.getElementById("sem1csub8").value;
-        
+        document.getElementById("percentage").innerHTML=((eval(num[0])+eval(num[1])+eval(num[2])+eval(num[3])+eval(num[4])+eval(num[5])+eval(num[6])+eval(num[7]))/800*100);
     for(let i=0;i<8;i++){
         if(num[i]<40)
         num[i]=0;
@@ -116,7 +116,7 @@ function sgpa()
     }
         document.getElementById("result").innerHTML =( ((eval(num[0])*3) + (eval(num[1])*3)+ (eval(num[2])*3)+ (eval(num[3])*3)+ (eval(num[4])*3)+ (eval(num[5])*2)+ (eval(num[6])*2)+(eval(num[7])*1))/20);
         sgpa=( ((eval(num[0])*3) + (eval(num[1])*3)+ (eval(num[2])*3)+ (eval(num[3])*3)+ (eval(num[4])*3)+ (eval(num[5])*2)+ (eval(num[6])*2)+(eval(num[7])*1))/20);
-        document.getElementById("percentage").innerHTML=((sgpa*10)-7.5);
+      
 }
 </script>
 </body>
