@@ -89,7 +89,7 @@ function sgpa()
         num[2]= document.getElementById("sem1csub3").value;
         num[3]= document.getElementById("sem1csub4").value;
         num[4]= document.getElementById("sem1csub5").value;
-        
+        document.getElementById("percentage").innerHTML=((eval(num[0])+eval(num[1])+eval(num[2])+eval(num[3])+eval(num[4]))/400*100);
         
     for(let i=0;i<5;i++){
         if(num[i]<40)
